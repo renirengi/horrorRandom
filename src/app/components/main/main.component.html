@@ -1,0 +1,28 @@
+<div class="main">
+  <div class = "random-container">
+  <div class = "random-film-container" *ngIf="randomFilm">
+  <ng-container  *ngIf="randomFilm">
+  <img
+      class="random-image"
+      [src]="randomFilm.urlPoster"
+      [alt]="randomFilm.title"
+      routerLink="/catalog/{{ randomFilm.id }}"
+    />
+    <h2>{{randomFilm.rusTitle}} ({{randomFilm.year}})</h2>
+</ng-container>
+</div>
+<button
+mat-raised-button
+color = "accent"
+class = "random-button"
+(click)="generateRandomFilm()"
+>
+<mat-icon>
+<span class="material-symbols-outlined">
+  movie_filter
+  </span>
+</mat-icon>
+Мне повезёт!
+</button>
+</div>
+</div>

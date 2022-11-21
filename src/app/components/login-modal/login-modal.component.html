@@ -1,0 +1,37 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h2 mat-dialog-title>Login</h2>
+  <div mat-dialog-content>
+
+    <mat-label>{{ result$ | async }}</mat-label>
+
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Маурицио" formControlName="name" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Enter password</mat-label>
+      <input
+        matInput
+        [type]="showConfirmation ? 'password' : 'text'"
+        formControlName="password"
+      />
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button
+      type="submit"
+      mat-stroked-button
+      color="primary"
+      [disabled]="!loginForm.valid"
+    >
+      Login
+    </button>
+    <button
+    mat-stroked-button
+    type="button"
+    color="primary"
+    (click)="onNoClick()">Cancel</button>
+  </div>
+</form>
+

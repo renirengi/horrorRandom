@@ -1,0 +1,31 @@
+.random-container {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+.random-film-container {
+  width: 30vw;
+  padding: 2em;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  background-color: #1D1E33;
+  border-radius: 20px;
+
+  .random-image {
+    height: 45vh;
+  }
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.random-button {
+  margin: 2em auto 0 auto;
+}
+}
